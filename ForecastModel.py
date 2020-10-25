@@ -8,7 +8,7 @@ resultsDict={}
 predictionsDict={}
 index = len(df_training)
 yhat = list()
-for t in tqdm(range(len(df_test.col))):
+for t in tqdm(range(len(df_test.col))):   # Tqdm makes you show your loop  a smart progress meter
     temp_train = df[:len(df_training)+t]
     model = AR(temp_train.col)
     model_fit = model.fit()

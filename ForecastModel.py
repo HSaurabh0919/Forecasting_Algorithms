@@ -39,3 +39,22 @@ def correlation_matrix(df):
     plt.show()
 
 correlation_matrix(df)
+
+
+3. #Variance finding using PCA
+from sklearn.decomposition import PCA
+pca=PCA(n_components=None)
+dfx_pca=pca.fit(dfx)
+
+#Plot the Explained Variance Ratio
+#https://github.com/tirthajyoti/Machine-Learning-with-Python/blob/master/Clustering-Dimensionality-Reduction/Principal%20Component%20Analysis.ipynb
+plt.figure(figsize=(10,6))
+plt.scatter(x=[i+1 for i in range(len(dfx_pca.explained_variance_ratio_))],y=dfx_pca.explained_variance_ratio_,s=200,alpha=0.75,c='orange',edgecolor='k')
+plt.grid(True)
+plt.title("Explained Varaiance Ratio of the \n fitted Principal Component Vector\n"fontsize=25)
+plt.xlabel("Principal Components",fontsize=15)
+plt.xticks[i+1 for i in range(len(dfx_pca.explained_variance_ratio_))],fontsize=15)
+plt.yticks(fontsize=15)
+plt.ylabel("Explained variance ratio",fontsize=15)
+plt.show()
+

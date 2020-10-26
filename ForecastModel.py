@@ -58,3 +58,17 @@ plt.yticks(fontsize=15)
 plt.ylabel("Explained variance ratio",fontsize=15)
 plt.show()
 
+#Transform the scaled data set using the fitted PCA object
+dfx_trans = pca.transform(dfx)
+
+dfx_trans = pd.DataFrame(data=dfx_trans)
+dfx_trans.head(10)
+#Plot the first two columns of this transformed data set with the color set to original ground truth class labe
+plt.figure(figsize=(10,6))
+plt.scatter(dfx_trans[0],dfx_trans[1],c=df['Class'],edgecolors='k',alpha=0.75,s=150)
+plt.grid(True)
+plt.title("Class separation using first two principal components\n",fontsize=20)
+plt.xlabel("Principal component-1",fontsize=15)
+plt.ylabel("Principal component-2",fontsize=15)
+plt.show()
+

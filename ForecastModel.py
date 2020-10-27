@@ -1,4 +1,4 @@
-1. #Autoregression Problems
+1. # Autoregression Problems
 
 # Walk throught the test data, training and predicting 1 day ahead for all the test data
 #Define df_training and df_test
@@ -41,7 +41,7 @@ def correlation_matrix(df):
 correlation_matrix(df)
 
 
-3. #Variance finding using PCA
+3. # Variance finding using PCA(Principal Component Analysis)
 from sklearn.decomposition import PCA
 pca=PCA(n_components=None)
 dfx_pca=pca.fit(dfx)

@@ -21,7 +21,6 @@ predictionsDict['AR'] = yhat.values
 
 
 2.#Drawing the Correlation Matrix
-
 def correlation_matrix(df):
     from matplotlib import pyplot as plt
     from matplotlib import cm as cm

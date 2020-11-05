@@ -8,6 +8,7 @@ import pandas as pd
 
 import numpy as np
 
+
 df=pd.read_csv(r"..\data.csv")
 
 #Check the data

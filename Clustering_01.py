@@ -85,7 +85,8 @@ for k in range(2,10):
     cluster_labels=clusters.fit_predict(X)
     silhouette_avg=metrics.silhouette_score(X,cluster_labels)
     silhouette_plot.append(silhouette_avg)
-
+    
+    
     
 #Plot the Silhouette coefficientabs
 plt.figure(figsize=(15,8))

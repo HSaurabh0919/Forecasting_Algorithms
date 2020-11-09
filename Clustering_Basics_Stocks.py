@@ -52,6 +52,7 @@ sc_X = StandardScaler()
 X_train = sc_X.fit_transform(X_train)
 X_test = sc_X.transform(X_test)
 
+
 #Polynomial Regression
 poly_reg = PolynomialFeatures(degree = 4,interaction_only=False, include_bias=True)
 X_poly = poly_reg.fit_transform(X_train)

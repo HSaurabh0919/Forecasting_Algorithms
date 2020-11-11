@@ -9,6 +9,7 @@ import statsmodels.api as sm
 import itertools
 import scipy
 import matplotlib.pyplot as plt
+
 #from  sklearn.cross_validation import train_test_split
 from sklearn.metrics import r2_score
 from sklearn.preprocessing import LabelEncoder
@@ -43,6 +44,7 @@ df2.drop(["Open","Volume","High","Low","Adj Close"],axis=1,inplace=True)
 df3=pd.merge(df1, df2, on="Date")
 target=df3["Close_x"]
 df3 = df3.drop(["Date","Close_x"],axis = 1)
+
 
 #Modelling the date
 X_train,X_test,y_train,y_test=ms.train_test_split(df3,target,test_size=0.4,random_state=42)

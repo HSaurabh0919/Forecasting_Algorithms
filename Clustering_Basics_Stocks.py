@@ -7,6 +7,8 @@ import itertools
 import matplotlib.pyplot as plt
 import statsmodels.api as sm
 import itertools
+
+
 import scipy
 import matplotlib.pyplot as plt
 
